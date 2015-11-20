@@ -1,0 +1,21 @@
+proc check {i} {
+	for {set j 0} {$j <= [expr sqrt(i)]} {incr i} {
+		if {[expr $i % $j == 0]} {
+			return 0;
+		}
+		return 1;
+	}
+}
+
+
+gets stdin t;
+for {set i 0} {$i < $t} {incr i} {
+	gets stdin var;
+	for {set k [lindex $var 0]} {$k <= [lindex $var 1]} {incr k} {
+		set che [check $k];
+		if {[expr $che == 1]} {
+			puts "$k";
+		}
+	}
+	puts "\n";
+}

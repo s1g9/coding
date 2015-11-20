@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+	int main()
+	{ int a,b,divi,count=0;
+		scanf("%d %d",&a,&divi);
+
+		for (int i = 0; i < a; ++i)
+		{
+			scanf("%d",&b);
+			if ( b%divi == 0)
+			{
+				count++;
+			}
+		}
+		printf("%d",count);
+		return 0;
+	}

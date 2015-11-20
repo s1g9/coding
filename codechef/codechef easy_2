@@ -1,0 +1,23 @@
+
+/* 
+	gets stdin var;
+	if { [expr [lindex $var 0] < [lindex $var 1]]*[expr [expr [lindex $var 0] % 5] == 0 ] } {
+		puts "[expr [lindex $var 1] - [lindex $var 0] - 0.5]";
+	} else { puts "[lindex $var 1]"}
+
+
+IN c++ */
+
+#include <stdio.h>
+
+	int main()
+	{ int a;
+		float b;
+		scanf("%d %f",&a,&b);
+		if ( a < b &&  a%5 == 0 )
+		{
+			printf("%.2f\n", b-a-0.5 );
+		}
+		else { printf("%.2f\n", b ); }
+		return 0;
+	}
